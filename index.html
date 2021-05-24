@@ -18,6 +18,23 @@
     <title>Collab.</title>
   </head>
   <body>
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-header">
+        <img src = "img/Collab..png" alt = "" class = "logo" />
+
+        <div class="close-button" onclick="toggleMobileNav()">
+          <button>
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+      </div>
+
+      <a href="" class = "mobile-nav-item mobile-nav-item_active">Home</a>
+      <a href="" class = "mobile-nav-item">About</a>
+      <a href="" class = "mobile-nav-item">Services</a>
+      <a href="" class = "mobile-nav-item">Contact</a>
+    </div>
+
     <div id = "container">
       <header>
         <img src = "img/Collab..png" alt = "" class = "logo" />
@@ -28,6 +45,12 @@
           <a href="" class = "nav-item">Services</a>
           <a href="" class = "nav-item">Contact</a>
         </nav>
+        
+        <div class="menu-button" onclick="toggleMobileNav()">
+          <button>
+            <i class="fa fa-reorder"></i>
+          </button>
+        </div>
 
         <button class = "nav-button">Get Started</button>
       </header>
@@ -59,5 +82,17 @@
         <span>Abhiram A</span>
       </footer>
     </div>
+
+    <script>
+      function toggleMobileNav() {
+        var element = document.getElementById("mobile-nav");
+
+        if (element.classList.contains("mobile-nav_open")) {
+          element.classList.remove("mobile-nav_open");
+        } else {
+          element.classList.add("mobile-nav_open");
+        }
+      }
+    </script>
   </body>
 </html>
